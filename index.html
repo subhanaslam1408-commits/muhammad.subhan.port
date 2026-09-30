@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Muhammad Subhan — Graphic Designer, Social Media Marketer, Video Editor and AI Video Creator based in Islamabad."
+  >
+
+  <meta name="theme-color" content="#101114">
+
+  <title>Muhammad Subhan | Creative Portfolio</title>
+
+  <style>
+    /* COLORS AND BASIC SETTINGS */
+
+    :root {
+      --bg: #101114;
+      --surface: #191b20;
+      --surface-light: #22252b;
+      --text: #f5f3ee;
+      --muted: #adb0b8;
+      --accent: #c6f36b;
+      --line: #34363b;
+      --cream: #efede5;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+
+    ::selection {
+      color: var(--bg);
+      background: var(--accent);
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding-block: 100px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(58px, 7vw, 96px);
+      letter-spacing: -5px;
+    }
+
+    h2 {
+      font-size: clamp(36px, 4.5vw, 60px);
+      letter-spacing: -2.5px;
+    }
+
+    h3 {
+      font-size: 23px;
+      letter-spacing: -0.7px;
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .section-top > p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 14px 23px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      transition:
+        transform 200ms ease,
+        background 200ms ease,
+        border-color 200ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .btn-primary {
+      color: #151a10;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: #d3ff82;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 200;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: #111;
+    }
+
+    .skip-link:focus {
+      top: 15px;
+    }
+
+    /* NAVIGATION */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(16, 17, 20, 0.97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-bar {
+      min-height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 1px;
+    }
+
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #74805f;
+      border-radius: 50%;
+      font-size: 17px;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      padding-block: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-button {
+      display: none;
+      min-width: 48px;
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 22px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding-top: 80px;
+      padding-bottom: 65px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-copy {
+      animation: enter 700ms ease both;
+    }
+
+    .hero-copy h1 span {
+      display: block;
+    }
+
+    .hero-description {
+      max-width: 465px;
+      margin-top: 27px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-location {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .hero-location span {
+      color: var(--accent);
+      margin-inline: 8px;
+    }
+
+    .portrait-card {
+      position: relative;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      animation: enter 850ms ease both;
+    }
+
+    .portrait-frame {
+      position: relative;
+      height: 490px;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #30372c;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .portrait-fallback {
+      height: 100%;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    .portrait-fallback strong {
+      font-size: 110px;
+      letter-spacing: -8px;
+      line-height: 1;
+    }
+
+    .portrait-fallback p {
+      max-width: 250px;
+      margin-top: 20px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .portrait-tag {
+      position: absolute;
+      left: 30px;
+      bottom: 94px;
+      padding: 12px 16px;
+      border: 1px solid #ffffff25;
+      border-radius: 8px;
+      background: #101114ed;
+    }
+
+    .portrait-tag strong,
+    .portrait-tag span {
+      display: block;
+    }
+
+    .portrait-tag strong {
+      font-size: 14px;
+    }
+
+    .portrait-tag span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .portrait-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 5px 5px;
+      font-size: 10px;
+      letter-spacing: 1.2px;
+    }
+
+    .portrait-bottom b {
+      color: var(--accent);
+      font-size: 25px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 55px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .hero-bottom a {
+      color: var(--accent);
+    }
+
+    /* SKILLS — ONE LINE CONTINUOUS ANIMATION */
+
+    .skills-bar {
+      padding-block: 23px;
+      border-block: 1px solid var(--line);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .skills-content {
+      display: flex;
+      width: max-content;
+      min-width: max-content;
+      align-items: center;
+      gap: 18px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      animation: skillsMarquee 32s linear infinite;
+      will-change: transform;
+    }
+
+    .skills-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+
+    .skills-content b {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .skills-content span {
+      flex-shrink: 0;
+    }
+
+    @keyframes skillsMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skills-content {
+        animation: none;
+      }
+    }
+
+    /* PORTFOLIO */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter {
+      min-height: 44px;
+      padding: 10px 18px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .filter[aria-pressed="true"] {
+      background: var(--accent);
+      color: #182010;
+      border-color: var(--accent);
+    }
+
+    .project-note {
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 35px 28px;
+    }
+
+    .project {
+      min-width: 0;
+    }
+
+    .project-art {
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 30px;
+      overflow: hidden;
+      border-radius: 14px;
+      transition: transform 250ms ease;
+    }
+
+    .project:hover .project-art {
+      transform: translateY(-5px);
+    }
+
+    .project-art small {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+    .project-art h3 {
+      font-size: clamp(42px, 4.5vw, 62px);
+      letter-spacing: -2.5px;
+    }
+
+    .project-art > span {
+      width: fit-content;
+      padding: 5px 10px;
+      border: 1px solid currentColor;
+      border-radius: 30px;
+      font-size: 9px;
+    }
+
+    .project-art img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .project-art video {
+      display: block;
+      max-width: 100%;
+      max-height: 550px;
+      margin: auto;
+    }
+
+    .art-social {
+      background: #d8cbb7;
+      color: #30281f;
+    }
+
+    .art-logo {
+      background: #c6f36b;
+      color: #1d2812;
+    }
+
+    .art-video {
+      background: #aca5ce;
+      color: #302741;
+    }
+
+    .art-ai {
+      background: #2a443b;
+      color: #e4ecdf;
+    }
+
+    .project-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 18px;
+    }
+
+    .project-caption h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .project-caption p,
+    .project-caption > span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      color: #222522;
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 80px;
+    }
+
+    .about-section .eyebrow {
+      color: #526630;
+    }
+
+    .about-section h2 {
+      max-width: 400px;
+    }
+
+    .about-signature {
+      margin-top: 35px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .about-location {
+      margin-top: 5px;
+      color: #60635c;
+      font-size: 13px;
+    }
+
+    .about-copy > p {
+      margin-bottom: 22px;
+      color: #55594f;
+      font-size: 15px;
+    }
+
+    .about-copy .intro {
+      color: #282d24;
+      font-size: 21px;
+    }
+
+    .about-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid #caccc1;
+    }
+
+    .about-facts h3 {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .about-facts p {
+      color: #55594f;
+      font-size: 13px;
+    }
+
+    /* SERVICES */
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      transition:
+        transform 250ms ease,
+        border-color 250ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #798d56;
+    }
+
+    .service-number {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 30px;
+      border: 1px solid #53633e;
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      font-size: 23px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .service-card a {
+      display: inline-block;
+      margin-top: 25px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #758b50;
+      font-size: 12px;
+    }
+
+    /* TOOLS AND PROCESS */
+
+    .tool-section {
+      padding-block: 40px;
+      border-block: 1px solid var(--line);
+    }
+
+    .tool-layout {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .tool-layout .eyebrow {
+      margin: 0;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tool-tags span {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: #cbced3;
+      font-size: 12px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 45px;
+    }
+
+    .process-grid article {
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .process-grid span {
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .process-grid h3 {
+      margin-top: 22px;
+      margin-bottom: 13px;
+    }
+
+    .process-grid p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact-copy > p:not(.eyebrow) {
+      max-width: 400px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact-links {
+      margin-top: 35px;
+    }
+
+    .contact-links small {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+    .contact-links > a {
+      display: inline-block;
+      font-size: 17px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links > a:hover {
+      color: var(--accent);
+    }
+
+    .contact-form {
+      min-width: 0;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #51565e;
+      border-radius: 7px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+    }
+
+    .form-note {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    #form-status {
+      margin-top: 12px;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding-block: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-row strong {
+      font-size: 14px;
+    }
+
+    .footer-row p,
+    .footer-row > a {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes enter {
+      from {
+        opacity: 0.4;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      h1 {
+        font-size: 70px;
+        letter-spacing: -4px;
+      }
+
+      .portrait-frame {
+        height: 440px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        gap: 40px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 720px) {
+      html {
+        scroll-padding-top: 90px;
+      }
+
+      .section {
+        padding-block: 60px;
+      }
+
+      .nav-bar {
+        min-height: 75px;
+        flex-wrap: wrap;
+        padding-block: 14px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        order: 3;
+        width: 100%;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: clamp(57px, 12vw, 82px);
+        letter-spacing: -3.5px;
+      }
+
+      h2 {
+        font-size: 40px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .portrait-frame {
+        height: 470px;
+      }
+
+      .hero-bottom {
+        flex-wrap: wrap;
+        margin-top: 35px;
+      }
+
+      .skills-content {
+        justify-content: flex-start;
+        font-size: 10px;
+      }
+
+      .section-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-art {
+        min-height: 320px;
+      }
+
+      .project-art h3 {
+        font-size: 48px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 25px;
+      }
+
+      .tool-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .contact-form {
+        padding: 24px;
+      }
+
+      .footer-row {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .portrait-frame {
+        height: 380px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .button-row .btn {
+        width: 100%;
+      }
+
+      .about-facts,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-bottom {
+        font-size: 9px;
+        letter-spacing: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="container nav-bar">
+
+      <a href="#home" class="brand" aria-label="Muhammad Subhan home">
+        <span class="brand-icon">MS</span>
+        <span>MUHAMMAD<br>SUBHAN</span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        ☰
+      </button>
+
+      <nav
+        class="nav-links"
+        id="navigation"
+        aria-label="Main navigation"
+      >
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn nav-cta" href="#contact">
+        Let’s Talk ↗
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+
+    <section class="hero section" id="home">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-copy">
+            <p class="eyebrow">
+              Muhammad Subhan · Digital Creative
+            </p>
+
+            <h1>
+              <span>Design.</span>
+              <span>Content.</span>
+              <span class="accent">Creative impact.</span>
+            </h1>
+
+            <p class="hero-description">
+             I'm a Grsphic Designer with 1+ year experience, creating impactful design, social media content, and videos. I also specialize in social media marketing, video editing, and AI-genrated video production.
+            </p>
+
+            <div class="button-row">
+              <a class="btn btn-primary" href="#portfolio">
+                Explore My Work ↗
+              </a>
+
+              <a class="btn" href="#contact">
+                Let’s Work Together
+              </a>
+            </div>
+
+            <p class="hero-location">
+              Islamabad, Pakistan
+              <span>•</span>
+              Open to project inquiries
+            </p>
+          </div>
+
+          <div class="portrait-card">
+            <div class="portrait-frame">
+
+              <img
+                id="profile-photo"
+                src="./profile.jpg/IMG_20251106_165352.jpg.jpeg"
+                alt="Muhammad Subhan"
+                width="600"
+                height="750"
+                fetchpriority="high"
+              >
+
+              <div
+                class="portrait-fallback"
+                id="portrait-fallback"
+                hidden
+              >
+                <strong>MS</strong>
+                <p>
+                  Muhammad Subhan<br>
+                  Graphic Designer & AI Video Creator
+                </p>
+              </div>
+
+            </div>
+
+            <div class="portrait-tag">
+              <strong>Muhammad Subhan</strong>
+              <span>Design · Marketing · videos</span>
+            </div>
+
+            <div class="portrait-bottom">
+              <span>CREATIVE THINKING. DIGITAL SKILLS. POWERFUL RESULTS.</span>
+              <b aria-hidden="true">↗</b>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-bottom">
+          <span>GRAPHIC DESIGNER / SOCIAL MEDIA MARKETER / VIDEO EDITOR / AI CREATOR</span>
+          <a href="#portfolio">Scroll to explore ↓</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS: ONE LINE — CONTINUOUS MARQUEE -->
+
+    <div class="skills-bar">
+      <div class="skills-content" aria-label="Creative skills">
+        <div class="skills-group">
+          <span>GRAPHIC DESIGNING</span><b aria-hidden="true">✳</b>
+          <span>SOCIAL MEDIA MARKETING</span><b aria-hidden="true">✳</b>
+          <span>SOCIAL MEDIA HANDLING</span><b aria-hidden="true">✳</b>
+          <span>VIDEO EDITING</span><b aria-hidden="true">✳</b>
+          <span>AI VIDEO CREATION</span><b aria-hidden="true">✳</b>
+          <span>PHOTOGRAPHY</span><b aria-hidden="true">✳</b>
+          <span>AI PROMPT ENGINEERING</span><b aria-hidden="true">✳</b>
+          <span>VIDEOGRAPHY</span><b aria-hidden="true">✳</b>
+          <span>BASIC CONTENT WRITING</span><b aria-hidden="true">✳</b>
+          <span>UI UX DESIGNS</span><b aria-hidden="true">✳</b>
+        </div>
+
+        <div class="skills-group" aria-hidden="true">
+          <span>GRAPHIC DESIGNING</span><b>✳</b>
+          <span>SOCIAL MEDIA MARKETING</span><b>✳</b>
+          <span>SOCIAL MEDIA HANDLING</span><b>✳</b>
+          <span>VIDEO EDITING</span><b>✳</b>
+          <span>AI VIDEO CREATION</span><b>✳</b>
+          <span>PHOTOGRAPHY</span><b>✳</b>
+          <span>AI PROMPT ENGINEERING</span><b>✳</b>
+          <span>VIDEOGRAPHY</span><b>✳</b>
+          <span>BASIC CONTENT WRITING</span><b>✳</b>
+          <span>UI UX DESIGNS</span><b>✳</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+
+    <section class="section" id="portfolio">
+      <div class="container">
+
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">Design / Content / Motion</p>
+            <h2>Creative work.<br>Different perspectives.</h2>
+          </div>
+
+          <p>
+            A space for social media designs, logo projects,
+            edited videos, and AI-generated visual stories.
+          </p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button
+            class="filter"
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            All Work
+          </button>
+
+          <button
+            class="filter"
+            type="button"
+            data-filter="design"
+            aria-pressed="false"
+          >
+            Social Designs
+          </button>
+
+          <button
+            class="filter"
+            type="button"
+            data-filter="logo"
+            aria-pressed="false"
+          >
+            Logos
+          </button>
+
+          <button
+            class="filter"
+            type="button"
+            data-filter="video"
+            aria-pressed="false"
+          >
+            Video Editing
+          </button>
+
+          <button
+            class="filter"
+            type="button"
+            data-filter="ai"
+            aria-pressed="false"
+          >
+            AI Videos
+          </button>
+        </div>
+
+        <p class="project-note" id="project-status" role="status">
+          4 sample layouts — replace with original project assets.
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project" data-category="design">
+            <div class="project-art art-social">
+              <small>SOCIAL MEDIA DESIGN</small>
+              <h3>Content<br>that connects.</h3>
+              <span>SAMPLE PROJECT · ADD YOUR WORK</span>
+            </div>
+
+            <div class="project-caption">
+              <div>
+                <h3>Social Media Designs</h3>
+                <p>Promotional posts · Infographics · Brand content</p>
+              </div>
+              <span>01</span>
+            </div>
+          </article>
+
+          <article class="project" data-category="logo">
+            <div class="project-art art-logo">
+              <small>LOGO DESIGN</small>
+              <h3>Simple.<br>Distinct.<br>Memorable.</h3>
+              <span>SAMPLE PROJECT · ADD YOUR WORK</span>
+            </div>
+
+            <div class="project-caption">
+              <div>
+                <h3>Logo Design</h3>
+                <p>Logo concepts · Visual consistency</p>
+              </div>
+              <span>02</span>
+            </div>
+          </article>
+
+          <article class="project" data-category="video">
+            <div class="project-art art-video">
+              <small>VIDEO EDITING</small>
+              <h3>Stories<br>in motion.</h3>
+              <span>SAMPLE PROJECT · ADD YOUR WORK</span>
+            </div>
+
+            <div class="project-caption">
+              <div>
+                <h3>Video Editing</h3>
+                <p>Reels · Promotional videos · Event edits</p>
+              </div>
+              <span>03</span>
+            </div>
+          </article>
+
+          <article class="project" data-category="ai">
+            <div class="project-art art-ai">
+              <small>AI VIDEO CREATION</small>
+              <h3>Imagine it.<br>Create it.</h3>
+              <span>SAMPLE PROJECT · ADD YOUR WORK</span>
+            </div>
+
+            <div class="project-caption">
+              <div>
+                <h3>AI Generated Videos</h3>
+                <p>Prompt development · Scenes · Visual storytelling</p>
+              </div>
+              <span>04</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">Behind the work</p>
+
+          <h2>
+            Creative thinking.<br>
+            Practical execution.
+          </h2>
+
+          <p class="about-signature">Muhammad Subhan</p>
+          <p class="about-location">Digital Creative · Islamabad</p>
+        </div>
+
+        <div class="about-copy">
+          <p class="intro">
+            I’m a creative professional working across graphic
+            design, social media content, video editing,
+            and AI-assisted visual storytelling.
+          </p>
+
+          <p>
+            With around one year of practical graphic design
+            experience, I focus on clear communication,
+            engaging content, and consistent visual branding.
+          </p>
+
+          <p>
+            My current role, as listed in my CV, is Senior
+            Graphic Designer and Social Media Handler at
+            Aspire Core Technologies in Islamabad.
+          </p>
+
+          <p>
+            I also create AI-generated videos, developing
+            concepts and prompts and bringing individual
+            scenes together through editing.
+          </p>
+
+          <div class="about-facts">
+            <div>
+              <h3>Education</h3>
+              <p>
+                Intermediate Pre-Engineering<br>
+                Allama Iqbal Open University<br>
+                Currently studying
+              </p>
+            </div>
+
+            <div>
+              <h3>Languages</h3>
+              <p>
+                Urdu — Fluent<br>
+                Punjabi — Fluent<br>
+                English — Intermediate
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">What I can help with</p>
+            <h2>Your ideas.<br>A creative partner.</h2>
+          </div>
+
+          <p>
+            Design, content, and video support for individual
+            projects and ongoing brand communication.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Graphic Design</h3>
+            <p>
+              Social posts, infographics, promotional artwork,
+              advertising visuals, typography, and layouts.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Logo Design</h3>
+            <p>
+              Logo concepts and consistent visual presentation
+              to help your brand communicate clearly.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Social Media</h3>
+            <p>
+              Content planning, page handling, posting,
+              caption writing, and daily creative support.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Video Editing</h3>
+            <p>
+              Reels, short-form content, event videos,
+              promotional edits, and advertisement videos.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>AI Video Creation</h3>
+            <p>
+              Creative concepts, prompts, scene planning,
+              generated clips, and final video editing.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Campaign Content</h3>
+            <p>
+              Awareness creatives, promotional content,
+              campaign ideas, and basic content writing.
+            </p>
+            <a href="#contact">Discuss your project ↗</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+
+    <section class="tool-section">
+      <div class="container tool-layout">
+
+        <p class="eyebrow">My creative toolkit</p>
+
+        <div class="tool-tags">
+          <span>Adobe Illustrator</span>
+          <span>Canva</span>
+          <span>Filmora</span>
+          <span>CapCut</span>
+          <span>VN</span>
+          <span>AI Creative Tools</span>
+          <span>Photoshop · Basic</span>
+          <span>Figma · Basic</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+
+    <section class="section">
+      <div class="container">
+
+        <p class="eyebrow">How I work</p>
+        <h2>From the idea to the final detail.</h2>
+
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Discover</h3>
+            <p>Understand your brand, audience, and project goals.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Develop</h3>
+            <p>Explore visual directions and build the concept.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Refine</h3>
+            <p>Review the work together and improve the details.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Deliver</h3>
+            <p>Prepare the final files for your intended platform.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-copy">
+          <p class="eyebrow">Let’s work together</p>
+
+          <h2>
+            Have an idea?<br>
+            <span class="accent">Let’s make it real.</span>
+          </h2>
+
+          <p>
+            Get in touch for design projects, video content,
+            remote opportunities, or ongoing creative support.
+          </p>
+
+          <div class="contact-links">
+            <small>EMAIL</small>
+            <a href="mailto:subhanaslam1408@gmail.com">
+              subhanaslam1408@gmail.com
+            </a>
+
+            <small>PHONE</small>
+            <a href="tel:+923011551222">
+              +92 301 1551222
+            </a>
+
+            <small>LOCATION</small>
+            <p>Islamabad, Pakistan</p>
+          </div>
+
+          <div class="button-row">
+            <a
+              class="btn"
+              href="https://wa.me/923011551222?text=Hi%20Subhan%2C%20I%20would%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chat on WhatsApp ↗
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+
+          <div class="field">
+            <label for="name">Your name *</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Enter your name"
+              maxlength="100"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              maxlength="180"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="service">Service required *</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Graphic Design</option>
+              <option>Logo Design</option>
+              <option>Social Media Management</option>
+              <option>Video Editing</option>
+              <option>AI Video Creation</option>
+              <option>Campaign Content</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Project details *</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell me about your project..."
+              maxlength="2000"
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Prepare Email ↗
+          </button>
+
+          <p class="form-note">
+            This opens an email draft in your email application.
+            Review the draft and press Send there.
+          </p>
+
+          <p id="form-status" role="status"></p>
+
+          <noscript>
+            <p class="form-note">
+              Please use the direct email or WhatsApp link
+              to send your inquiry.
+            </p>
+          </noscript>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <strong>Muhammad Subhan</strong>
+
+      <p>
+        © <span id="year">2026</span> Muhammad Subhan
+      </p>
+
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    /* CURRENT YEAR */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    /* MOBILE NAVIGATION */
+
+    const menuButton = document.getElementById("menu-button");
+    const navigation = document.getElementById("navigation");
+
+    function closeMenu() {
+      navigation.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+      menuButton.textContent = "☰";
+    }
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        navigation.classList.contains("open")
+      ) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+
+    /* PROFILE PICTURE FALLBACK */
+
+    const profilePhoto = document.getElementById("profile-photo");
+
+    const portraitFallback =
+      document.getElementById("portrait-fallback");
+
+    function showPhotoFallback() {
+      profilePhoto.hidden = true;
+      portraitFallback.hidden = false;
+    }
+
+    profilePhoto.addEventListener("error", showPhotoFallback);
+
+    if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
+      showPhotoFallback();
+    }
+
+    /* PORTFOLIO FILTERS */
+
+    const filterButtons =
+      document.querySelectorAll("[data-filter]");
+
+    const projects =
+      document.querySelectorAll("[data-category]");
+
+    const projectStatus =
+      document.getElementById("project-status");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const selectedCategory = button.dataset.filter;
+        let visibleCount = 0;
+
+        filterButtons.forEach(function (item) {
+          item.setAttribute(
+            "aria-pressed",
+            String(item === button)
+          );
+        });
+
+        projects.forEach(function (project) {
+          const matches =
+            selectedCategory === "all" ||
+            project.dataset.category === selectedCategory;
+
+          project.hidden = !matches;
+
+          if (matches) {
+            visibleCount++;
+          }
+        });
+
+        projectStatus.textContent =
+          visibleCount +
+          " sample layout" +
+          (visibleCount === 1 ? "" : "s") +
+          " — replace with original project assets.";
+      });
+    });
+
+    /* CONTACT EMAIL DRAFT */
+
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) {
+        return;
+      }
+
+      const data = new FormData(contactForm);
+
+      const subject =
+        "Portfolio inquiry — " + data.get("service");
+
+      const body = [
+        "Name: " + data.get("name"),
+        "Email: " + data.get("email"),
+        "Service: " + data.get("service"),
+        "",
+        "Project details:",
+        data.get("message")
+      ].join("\n");
+
+      const emailLink =
+        "mailto:subhanaslam1408@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = emailLink;
+
+      formStatus.textContent =
+        "Email draft requested. Review and send it in your email app. " +
+        "If nothing opened, please use the direct email or WhatsApp link.";
+    });
+  </script>
+
+</body>
+</html>
